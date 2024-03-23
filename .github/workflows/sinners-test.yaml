@@ -13,11 +13,10 @@ jobs:
       uses: actions/checkout@v4
     
     - name: 📂 Sync files
-      uses: milanmk/actions-file-deployer@master
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        remote-host: ${{ secrets.FTP_SERVER }}
-        remote-user: ${{ secrets.FTP_USERNAME }}
-        remote-password: ${{ secrets.FTP_PASSWORD }}
-        local-path: .
-        remote-path: ${{ secrets.FTP_SERVER_DIR }}
-        remote-protocol: "sftp"
+          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_path: './*'
+          remote_path: ${{ secrets.FTP_SERVER_DIR }}
