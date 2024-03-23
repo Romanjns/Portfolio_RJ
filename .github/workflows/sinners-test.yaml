@@ -26,3 +26,4 @@ jobs:
           **/.git*/**
           **/Dockerfile
           **/*.md
+          
