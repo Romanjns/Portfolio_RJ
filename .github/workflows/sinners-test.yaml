@@ -18,5 +18,6 @@ jobs:
         remote-host: ${{ secrets.FTP_SERVER }}
         remote-user: ${{ secrets.FTP_USERNAME }}
         remote-password: ${{ secrets.FTP_PASSWORD }}
+        local-path: .
         remote-path: ${{ secrets.FTP_SERVER_DIR }}
         remote-protocol: "sftp"
