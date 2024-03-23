@@ -13,17 +13,10 @@ jobs:
       uses: actions/checkout@v4
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: milanmk/actions-file-deployer@master
       with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: ${{ secrets.FTP_SERVER_DIR }}
-        protocol: sftp
-        dry-run: true
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/Dockerfile
-          **/*.md
-          
+        remote-host: ${{ secrets.FTP_SERVER }}
+        remote-user: ${{ secrets.FTP_USERNAME }}
+        remote-password: ${{ secrets.FTP_PASSWORD }}
+        remote-path: ${{ secrets.FTP_SERVER_DIR }}
+        remote-protocol: "sftp"
