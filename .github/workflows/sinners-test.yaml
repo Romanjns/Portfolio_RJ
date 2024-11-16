@@ -16,7 +16,7 @@ jobs:
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         username: ${{ secrets.FTP_USERNAME }}
-        server: ${{ secrets.FTP_SERVER }}
+        server: ${{ vars.FTP_SERVER }}
         password: ${{ secrets.FTP_PASSWORD }}
         local_path: './*'
         remote_path: ${{ vars.FTP_SERVER_DIR }}
