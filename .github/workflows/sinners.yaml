@@ -1,4 +1,4 @@
-name: sinners ftp test 
+name: sinners ftp
 
 on:
   push:
