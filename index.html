@@ -1,18 +1,498 @@
 <!DOCTYPE html>
-<!-- index.html -->
 <html lang="en">
-    <head>
-        <title>Testpage</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="inner">
-            <h1>Welkom!</h1>
-            <img alt="logo" src="./logoimage.png">
-                <p>
-                You've successfully deployed the containerized website!
-                </p>
-                <p>blablablablablablablablabll</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roman Janssens - Cybersecurity & Cloud Management specialist. Studies at Thomas More Geel with expertise in application development and game development.">
+    <meta name="keywords" content="cybersecurity, cloud management, application development, game development, portfolio, unreal engine">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Roman Janssens | Portfolio</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="#" class="title">Roman Janssens</a>
         </div>
-    </body>
+        <div class="menu">
+            <a href="#about" class="menu-item">About</a>
+            <a href="#skills" class="menu-item">Skills</a>
+            <a href="#interests" class="menu-item">Interests</a>
+            <a href="#contact" class="button-primary">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-shapes">
+            <!-- These shapes will be generated with JavaScript -->
+          </div>
+        <div id="particles-js"></div>
+        <div class="hero-content fade-in">
+            <h1 class="hero-title">Roman Janssens</h1>
+            <h2 class="hero-subtitle">Cybersecurity & Cloud Management Specialist</h2>
+            <p>I'm a 19-year-old student at Thomas More Geel with a passion for cybersecurity, application development, and game design.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="button-primary">Learn More</a>
+            </div>
+            
+        </div>
+        <div class="hero-image fade-in">
+            <div class="code-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="typing-text">whoami</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">></span>
+                        <span>Roman Janssens</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span>cat skills.txt</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">></span>
+                        <span>Cybersecurity | Cloud Management | App Development | Game Dev</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span>cd education</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">></span>
+                        <span>/education</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span>ls -la</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">></span>
+                        <span>Thomas_More_Geel - Cybersecurity & Cloud Management</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span>cd ../interests</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">></span>
+                        <span>/interests</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span>ls -la</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">></span>
+                        <span>Piano | Skateboarding | Game Development</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="typing-text">_</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I'm a 19-year-old cybersecurity enthusiast currently studying Cybersecurity and Cloud Management at Thomas More Geel. My fascination with technology began at an early age, leading me to explore various aspects of the digital world. I'm particularly interested in the intersection of security, cloud technologies, and software development.
+        </p>
+        <p>
+            Besides my academic focus, I enjoy challenging myself by developing applications and experimenting with game development using Unreal Engine. These practical projects allow me to apply theoretical knowledge and constantly improve my skills in a hands-on environment.
+        </p>
+        <p>
+            When I'm not immersed in technology, you can find me playing piano or skateboarding - activities that provide me with the perfect balance to my technical pursuits.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3 class="category-title">Cybersecurity</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Penetration Testing</span>
+                        <span class="skill-level">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Security Analysis</span>
+                        <span class="skill-level">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Vulnerability Assessment</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">Cloud Management</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">AWS</span>
+                        <span class="skill-level">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Azure</span>
+                        <span class="skill-level">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Cloud Security</span>
+                        <span class="skill-level">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">Development</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Application Development</span>
+                        <span class="skill-level">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Unreal Engine</span>
+                        <span class="skill-level">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Full-Stack Development</span>
+                        <span class="skill-level">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="interests">
+        <h2 class="section-title">My Interests</h2>
+        <div class="interests-grid">
+            <div class="interest-item">
+                <div class="interest-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h3 class="interest-title">Piano</h3>
+                <p class="interest-description">
+                    Music provides me with a creative outlet away from technology. Playing piano helps me develop discipline and creativity that translates into my technical work.
+                </p>
+            </div>
+            <div class="interest-item">
+                <div class="interest-icon">
+                    <i class="fas fa-skateboard"></i>
+                </div>
+                <h3 class="interest-title">Skateboarding</h3>
+                <p class="interest-description">
+                    Skateboarding teaches me persistence and the value of practice. Just like in programming, landing a new trick requires patience and commitment to improvement.
+                </p>
+            </div>
+            <div class="interest-item">
+                <div class="interest-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3 class="interest-title">Game Development</h3>
+                <p class="interest-description">
+                    Creating games in Unreal Engine combines my passion for coding with storytelling and design, allowing me to build immersive digital experiences from the ground up.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>Have a project in mind or want to discuss cybersecurity solutions? Fill out the form and I'll get back to you as soon as possible.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Geel, Belgium</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>contact@romanjanssens.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+32 123 456 789</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <select>
+                                <option value="" disabled selected>Subject</option>
+                                <option value="cybersecurity">Cybersecurity</option>
+                                <option value="cloud">Cloud Management</option>
+                                <option value="development">Application Development</option>
+                                <option value="game">Game Development</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-group textarea-group">
+                            
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p class="footer-text">Want to discuss a project or just say hello?</p>
+        <div class="footer-social">
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="copyright">© 2025 Roman Janssens | Cybersecurity & Cloud Management Specialist</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS("particles-js", {
+                    "particles": {
+                        "number": {
+                            "value": 80,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#7D3EDC"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": false,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#7D3EDC",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 2,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "bubble": {
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
+                                "speed": 3
+                            },
+                            "repulse": {
+                                "distance": 200,
+                                "duration": 0.4
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            },
+                            "remove": {
+                                "particles_nb": 2
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+  const shapesContainer = document.querySelector('.floating-shapes');
+  
+  // Create 15 random floating shapes
+  for (let i = 0; i < 15; i++) {
+    const shape = document.createElement('div');
+    shape.className = 'shape';
+    
+    // Random size between 20px and 120px
+    const size = Math.random() * 100 + 20;
+    shape.style.width = `${size}px`;
+    shape.style.height = `${size}px`;
+    
+    // Random position
+    shape.style.left = `${Math.random() * 100}%`;
+    shape.style.top = `${Math.random() * 100}%`;
+    
+    // Random animation duration
+    shape.style.animationDuration = `${Math.random() * 10 + 10}s`;
+    
+    // Random delay
+    shape.style.animationDelay = `${Math.random() * 5}s`;
+    
+    shapesContainer.appendChild(shape);
+  }
+});
+    </script>
+</body>
 </html>
