@@ -1,14 +1,9 @@
 // Preloader functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Show preloader initially
     const preloader = document.querySelector('.preloader');
 
-    // Hide preloader when page is fully loaded
     window.addEventListener('load', function() {
-        // Add hidden class to fade out preloader
         preloader.classList.add('hidden');
-
-        // Optional: remove preloader from DOM after animation completes
         setTimeout(() => {
             preloader.style.display = 'none';
         }, 500);
@@ -34,15 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-
-
     // Smooth scrolling for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
 
             // Close mobile menu if open
-            document.querySelector('.mobile-menu').classList.remove('active');
+            mobileMenu.classList.remove('active');
 
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
@@ -88,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reveal animations on scroll
     function revealOnScroll() {
         const reveals = document.querySelectorAll('.reveal');
-
         for (let i = 0; i < reveals.length; i++) {
             const windowHeight = window.innerHeight;
             const elementTop = reveals[i].getBoundingClientRect().top;
@@ -119,15 +111,15 @@ if (typeof particlesJS !== 'undefined') {
                 value: '#0d6efd'
             },
             shape: {
-                type: 'circle',
+                type: 'circle'
             },
             opacity: {
                 value: 0.5,
-                random: false,
+                random: false
             },
             size: {
                 value: 3,
-                random: true,
+                random: true
             },
             line_linked: {
                 enable: true,
@@ -143,7 +135,7 @@ if (typeof particlesJS !== 'undefined') {
                 random: false,
                 straight: false,
                 out_mode: 'out',
-                bounce: false,
+                bounce: false
             }
         },
         interactivity: {

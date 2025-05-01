@@ -89,6 +89,7 @@ section {
 }
 
 /* Buttons */
+
 .button-primary {
   background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
   color: var(--text-color);
@@ -250,12 +251,17 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--darker-color);
+  background-color: var(--darker-color);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .loader {
@@ -1330,6 +1336,9 @@ body.light-mode {
   .contact-info {
     margin-bottom: 30px;
   }
+  .hero-image{
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1398,9 +1407,6 @@ body.light-mode {
     font-size: 1.2rem;
   }
   
-  .code-terminal {
-    width: 100%;
-  }
   
   .stat-number {
     font-size: 2rem;
@@ -1426,4 +1432,10 @@ body.light-mode {
   .contact-btn {
     width: 100%;
   }
+}
+
+
+.clickable-card:hover {
+
+  cursor: pointer;
 }
