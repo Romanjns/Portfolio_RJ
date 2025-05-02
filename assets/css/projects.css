@@ -269,7 +269,7 @@ nav {
 
 /* Header */
 header {
-    background-color: var(--darker-color);
+    background-color: #0A0C0F;
     padding: 80px 0 50px;
     text-align: center;
     position: relative;
@@ -283,8 +283,6 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 90% 10%, var(--primary-dark) 0%, transparent 25%),
-                radial-gradient(circle at 10% 90%, var(--secondary-color) 0%, transparent 25%);
     opacity: 0.05;
     z-index: 1;
 }
@@ -660,3 +658,152 @@ footer {
         font-size: 2rem;
     }
 }
+/* Project Links Section Styling */
+
+.project-links {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary-color));
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0px;
+  }
+  
+  .project-links::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    z-index: 0;
+    border-radius: 12px;
+  }
+  
+  .project-links h4.section-subtitle {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .project-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+  
+  .project-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    color: #1a2a6c;
+  }
+  
+  .project-link:hover::before {
+    transform: translateX(100%);
+  }
+  
+  .project-link i {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+    color: #b21f1f;
+    transition: all 0.3s ease;
+  }
+  
+  .project-link:hover i {
+    transform: scale(1.2);
+    color: #1a2a6c;
+  }
+  
+  /* Individual icon colors */
+  .project-link:nth-child(1) i {
+    color: #2d6da9;
+  }
+  
+  .project-link:nth-child(2) i {
+    color: #ff0000;
+  }
+  
+  .project-link:nth-child(3) i {
+    color: #00a550;
+  }
+  
+  .project-link:nth-child(4) i {
+    color: #6a45be;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .links-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .project-link {
+      padding: 0.85rem 1.25rem;
+    }
+  }
+  
+  .wave-container {  
+    height: 40vh;
+    background-color: #0a0c0f;
+    position: relative;
+  }
+  
+  .wave-container::before {   
+    content: "";
+    width: 100%;
+    height: 168px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 1vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  115' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 84L50 79C100 74 200 63 300 43C400 22 500 -9 600 2C700 12 800 63 900 84C1000 105 1100 94 1150 89L1200 84V115H1150C1100 115 1000 115 900 115C800 115 700 115 600 115C500 115 400 115 300 115C200 115 100 115 50 115H0V84Z' fill='%23121212'/></svg>");
+  }
+  
+  @media(max-width:850px) {
+    .wave-container::before {    
+      height: 84px
+    }  
+  }
