@@ -3,31 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
+    <title>404 - Page Not Found</title>
     <style>
+        /* Base Styles and Variables */
+        :root {
+            --primary-color: #0d6efd;
+            --primary-dark: #0a58ca;
+            --primary-light: #6ea8fe;
+            --secondary-color: #6c63ff;
+            --accent-color: #00d9ff;
+            --dark-color: #121212;
+            --darker-color: #0a0a0a;
+            --light-dark: #1e1e1e;
+            --gray-color: #2d2d2d;
+            --light-gray: #3a3a3a;
+            --text-color: #f8f9fa;
+            --text-secondary: #adb5bd;
+            --success-color: #28a745;
+            --transition-speed: 0.3s;
+            --transition: all 0.3s ease;
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            position: relative;
+            overflow-x: hidden;
+            background-color: var(--dark-color);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        h1 {
-            font-size: 50px;
-        }
-        p {
-            font-size: 20px;
-        }
+
         a {
-            color: #007BFF;
             text-decoration: none;
+            color: var(--text-color);
+            transition: var(--transition);
         }
-        a:hover {
-            text-decoration: underline;
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        /* 404 Page Styles */
+        .error-container {
+            padding: 3rem;
+            background-color: var(--light-dark);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.8s ease, floatUp 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes floatUp {
+            from { transform: translateY(30px); }
+            to { transform: translateY(0); }
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 8s ease infinite;
+            line-height: 1;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .error-message {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .home-button {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+            font-size: 1rem;
+        }
+
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4);
+        }
+
+        /* Decoration Elements */
+        .decoration {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .deco-1 {
+            width: 200px;
+            height: 200px;
+            top: -100px;
+            left: -100px;
+        }
+
+        .deco-2 {
+            width: 150px;
+            height: 150px;
+            bottom: -75px;
+            right: -75px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+
+            .error-title {
+                font-size: 1.5rem;
+            }
+
+            .error-container {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 4rem;
+            }
+
+            .error-title {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>404</h1>
-    <p>Oops! The page you are looking for does not exist.</p>
-    <p><a href="/">Go back to the homepage</a></p>
+    <div class="container">
+        <div class="error-container">
+            <!-- Decorative elements -->
+            <div class="decoration deco-1"></div>
+            <div class="decoration deco-2"></div>
+            
+            <!-- Error content -->
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title">Page Not Found</h2>
+            <p class="error-message">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+            <a href="index.html" class="home-button">Back to Homepage</a>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create some random floating particles in the background
+            const body = document.querySelector('body');
+            
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = Math.random() * 10 + 5 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.backgroundColor = 'var(--accent-color)';
+                particle.style.borderRadius = '50%';
+                particle.style.opacity = Math.random() * 0.2 + 0.1;
+                
+                // Random position
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.left = Math.random() * 100 + '%';
+                
+                // Animation
+                particle.style.animation = `float ${Math.random() * 10 + 10}s ease-in-out infinite`;
+                
+                // Create keyframes for this specific particle
+                const keyframes = `
+                    @keyframes float {
+                        0% { transform: translate(0, 0) rotate(0deg); }
+                        50% { transform: translate(${Math.random() * 50 - 25}px, ${Math.random() * 50 - 25}px) rotate(${Math.random() * 360}deg); }
+                        100% { transform: translate(0, 0) rotate(0deg); }
+                    }
+                `;
+                
+                // Add keyframes to document
+                const style = document.createElement('style');
+                style.innerHTML = keyframes;
+                document.head.appendChild(style);
+                
+                body.appendChild(particle);
+            }
+        });
+    </script>
 </body>
 </html>
